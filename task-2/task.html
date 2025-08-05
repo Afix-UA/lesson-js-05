@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>task | 0</title>
+    <style>
+        span {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lesson__container">
+        <h1 class="lesson__title">Задача 0</h1>
+        <p> Вивести на екран 8 кнопок з написом “Hello”.
+        </p>
+    </div>
+
+    <script>
+        // задача 0
+        if (confirm('Почати тестування?')) {
+            const buttonCount = 8
+            let buttonIndex = 0
+            while (buttonIndex <= buttonCount) {
+               document.write(`<li class="lesson__item"><a target="_blank" href="./task-2/task.html" class="lesson__link"> Hallo ${buttonIndex}</a></li> `)
+                buttonIndex++
+            }
+        }
+    </script>
+
+</body>
+
+</html>

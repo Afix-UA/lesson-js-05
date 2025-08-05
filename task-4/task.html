@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>task | 2</title>
+    <style>
+        span {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lesson__container">
+        <h1 class="lesson__title">Задача 2</h1>
+        <p> Створити 10 елементів для введення цін продуктів </p>
+
+    </div>
+
+    <script>
+        // задача 2
+        document.write(' <div class="lesson__container">')
+            document.write('<div>')
+        for (let productItem = 0; productItem < 10; productItem++) {
+            document.write(`product #${productItem + 1} <input type="text" placeholder="product ${productItem + 1}"> <br>`)
+        }
+        document.write(' </div>')
+        document.write(' </div>')
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>task | 3</title>
+    <style>
+        span {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lesson__container">
+        <h1 class="lesson__title">Задача 3</h1>
+        <p>Вивести таблицю з одним рядком і 7 стовпцями.
+        </p>
+    </div>
+
+    <script>
+        // задача 3
+        if (confirm('Почати тестування?')) {
+            document.write('<div style="display:inline-block; padding:.3px; border:1px solid #fff;">')
+            for (let countInline = 0; countInline < 7; countInline++) {
+                document.write(`<div style="display:inline-block; padding:5px; border:1px solid #fff;">${countInline}</div>`)
+
+            }
+            document.write('</div>')
+
+        }
+
+    </script>
+
+</body>
+
+</html>
