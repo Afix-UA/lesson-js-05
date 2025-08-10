@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>task | -2</title>
+    <title>task | 30.</title>
     <style>
         span {
             font-size: 10px;
@@ -16,25 +16,28 @@
 
 <body>
     <div class="lesson__container">
-        <h1 class="lesson__title">Задача -2</h1>
-        <p> Поступово генерувати 100 випадкових чисел від 1 до 1000. Підрахувати яких чисел більше: парних чи непарних.
-        </p>
+        <h1 class="lesson__title">Задача 30.</h1>
+        <p> Спортсмен-лижник в перший день тренування пробіг 10 км. Кожного наступного дня він збільшував довжину
+            пробігу на P% від довжини пробігу попереднього дня (P – дійсне число, 0 < P < 50). Визначити, після якого
+                дня тренування сумарний пробіг лижника за всі дні перевищить 200 км. Вивести знайдену кількість днів K
+                (ціле) і сумарний пробіг S (дійсне число). </p>
     </div>
 
     <script>
-        // задача -2
-
+        // задача 30
         if (confirm('Почати тестування?')) {
-            let evenNumber = 0, oddNumber = 0;
-            for (let index = 0; index < 100; index++) {
-                const randomNumber = 1 + Math.floor(Math.random() * 1000);
-                if (randomNumber % 2 !== 0) evenNumber++
-                else oddNumber++
+            const percentIncreas = 30 / 100  // Приріст у відсотках кожного дня
+            let distanceDay = 10  // Відстань у перший день (в км)
+            let totalDistance = 0         // загальний пробіг, значення буде додаватись поступово
+            const totalSkierDistance = 200     // загальний пробіг, значення буде додаватись поступово
+
+
+            for (let day = 0; totalDistance <= totalSkierDistance; day++, distanceDay += distanceDay * percentIncreas) {
+                totalDistance += distanceDay
+                document.write(`День ${day}: пробіг ${distanceDay.toFixed()} км, сумарно ${totalDistance.toFixed()} км<br>`);
+
             }
-            document.write(` <div class="lesson__container">кількіть парних: ${evenNumber}<br/>кількіть непарних:${oddNumber} </div>`)
         }
-
-
     </script>
 
 </body>

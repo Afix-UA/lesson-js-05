@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>task | -1</title>
+    <title>task | 29</title>
     <style>
         span {
             font-size: 10px;
@@ -16,27 +16,46 @@
 
 <body>
     <div class="lesson__container">
-        <h1 class="lesson__title">Задача -1</h1>
-        <p> Вивести на екран номери місяців весни і літа (від 3 до 8)
+        <h1 class="lesson__title">Задача 29</h1>
+        <p>Дано ціле число N (N > 0). Використовуючи операції ділення націло та остачі від ділення, визначити чи є в
+            записі числа N непарні цифри. Якщо так, то вивести True, якщо ні – False.
         </p>
     </div>
 
     <script>
-        // задача -1
-        if (confirm('почати тестування?')) {
-            let mounts = 3
-            while (mounts <= 8) {
-                if (mounts <= 5) document.write(`привіт весна та твій місяць ${mounts}<br>`)
-                else             document.write(`привіт літо та твій місяць ${mounts}<br>`)
+        // задача 29
+        if (confirm('Почати тестування?')) {
+            const N = prompt('Введіть ціле число N (> 0):', 12)
 
-                mounts++
+            if (+N) {
+                for (let i = 0; i < N.length; i++) {
+
+                    if (+N[i] % 2 !== 0) {
+                        document.write('True<br>')
+                        break
+                    } else {
+                        document.write('False<br>')
+                        break
+                    }
+                }
 
             }
+
+            // let N = parseInt(prompt("Введіть ціле число N (> 0):"), 10);
+
+            // let hasOdd = false;
+
+            // for (let i = 0; N > 0; i++) {
+            //     let digit = N % 10
+            //     if (digit % 2 !== 0) {
+            //         hasOdd = true
+            //         break
+            //     }
+            //     N = Math.floor(N / 10);
+
+            // }
+            // document.write(hasOdd);
         }
-
-
-
-
     </script>
 
 </body>

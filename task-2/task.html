@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>task | 0</title>
+    <title>task | 1</title>
     <style>
         span {
             font-size: 10px;
@@ -16,20 +16,26 @@
 
 <body>
     <div class="lesson__container">
-        <h1 class="lesson__title">Задача 0</h1>
-        <p> Вивести на екран 8 кнопок з написом “Hello”.
+        <h1 class="lesson__title">Задача 1</h1>
+        <p>Вивести з використанням циклів маркований список з випадковими числами (1-100). Кількість випадкових чисел
+            вводиться користувачем. Приклад:
         </p>
     </div>
 
     <script>
-        // задача 0
+        // задача 1
         if (confirm('Почати тестування?')) {
-            const buttonCount = 8
-            let buttonIndex = 0
-            while (buttonIndex <= buttonCount) {
-               document.write(`<li class="lesson__item"><a target="_blank" href="./task-2/task.html" class="lesson__link"> Hallo ${buttonIndex}</a></li> `)
-                buttonIndex++
+            const ADD_USER_COUNT = parseInt(prompt('Введіть кількість пунктів які ви хочете бачити на сторінці.  ', 5))
+            let count = 0
+            document.write(`<div class="lesson__container">`)
+            document.write(`<ol>`)
+            while (count < ADD_USER_COUNT) {
+                const randomNumber = 1 + Math.floor(Math.random() * 100);
+                document.write(`<li> ${randomNumber}</li>`)
+                count++
             }
+            document.write(`</div>`)
+            document.write(`</ol>`)
         }
     </script>
 
